@@ -38,27 +38,24 @@ class Api:
         self.apikey = apikey
         self.usessl = usessl
     
-    def lookup(self, params = {}):
+    def lookup(self, domain = ''):
 
          try:
-             parameters = urlencode((("key", self.apikey), ("format", 'json'), ("domain", params['domain'] if "domain" in params else '')))
+             parameters = urlencode((("key", self.apikey), ("format", 'json'), ("domain", domain if domain else '')))
              response = httprequest(parameters, self.usessl)
              return response
          except:
              return None
     
-    def getPunycode(self, params = {}):
-         domain = params['domain'] if "domain" in params else ''
-         # return domain.encode('ascii').decode('idna')
+    def getPunycode(self, domain = ''):
          if sys.version < '3':
-            converted_result = unicode(domain).encode('ascii').decode('idna')
+            converted_result = unicode(domain if domain else '').encode('ascii').decode('idna')
             return converted_result.encode('utf-8')
          else:
             return domain.encode('ascii').decode('idna')
     
-    def getNormalText(self, params = {}):
-         domain = params['domain'] if "domain" in params else ''
-         # return domain.encode('idna').decode('ascii')
+    def getNormalText(self, domain = ''):
+        domain = domain if domain else ''
          if sys.version < '3':
             converted_result = domain.encode('idna').decode('ascii')
             return converted_result.encode('utf-8')

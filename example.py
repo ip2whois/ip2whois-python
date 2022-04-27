@@ -4,16 +4,13 @@ import ip2whois
 ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 # Lookup domain information
-parameter = {'domain': 'example.com'}
-results = ip2whois_init.lookup(parameter)
+results = ip2whois_init.lookup('example.com')
 print(results)
 
 # Convert normal text to punycode
-parameter = {'domain': 'xn--tst-qla.de'}
-result = ip2whois_init.getPunycode(parameter)
+result = ip2whois_init.getPunycode('xn--tst-qla.de')
 print(result)
 
 # Convert punycode to normal text
-parameter = {'domain': 'täst.de'}
-result = ip2whois_init.getNormalText(parameter)
+result = ip2whois_init.getNormalText('täst.de')
 print(result)

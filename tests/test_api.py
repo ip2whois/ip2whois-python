@@ -7,8 +7,7 @@ import ip2whois
 
 def test_lookup(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
-    parameter = {'domain': 'example.c'}
-    results = ip2whois_init.lookup(parameter)
+    results = ip2whois_init.lookup('example.c')
     # assert results['error_message'] == 'API key not found.'
     if (global_data["apikey"] == 'YOUR_API_KEY'):
         assert results['error']['error_message'] == 'API key not found.'
@@ -37,12 +36,10 @@ def test_function_exist(global_data):
 
 def test_get_puny_code(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
-    parameter = {'domain': 'xn--tst-qla.de'}
-    result = ip2whois_init.getPunycode(parameter)
+    result = ip2whois_init.getPunycode('xn--tst-qla.de')
     assert result == "täst.de"
 
 def test_get_normal_text(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
-    parameter = {'domain': 'täst.de'}
-    result = ip2whois_init.getNormalText(parameter)
+    result = ip2whois_init.getNormalText('täst.de')
     assert result == "xn--tst-qla.de"

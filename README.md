@@ -16,12 +16,6 @@ pip install IP2WHOIS
 
 ### Lookup Domain Information
 
-#### Object Properties
-
-| Property Name | Property Type | Description  |
-| ------------- | ------------- | ------------ |
-| domain        | string        | Domain name. |
-
 ```python
 import ip2whois
 
@@ -29,18 +23,11 @@ import ip2whois
 ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 # Lookup domain information
-parameter = {'domain': 'example.com'}
-results = ip2whois_init.lookup(parameter)
+results = ip2whois_init.lookup('example.com')
 print(results)
 ```
 
 ### Convert Normal Text to Punycode
-
-#### Object Properties
-
-| Property Name | Property Type | Description  |
-| ------------- | ------------- | ------------ |
-| domain        | string        | Domain name. |
 
 ```python
 import ip2whois
@@ -50,18 +37,11 @@ ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 
 # Convert normal text to punycode
-parameter = {'domain': 'xn--tst-qla.de'}
-result = ip2whois_init.getPunycode(parameter)
+result = ip2whois_init.getPunycode('xn--tst-qla.de')
 print(result)
 ```
 
 ### Convert Punycode to Normal Text
-
-#### Object Properties
-
-| Property Name | Property Type | Description  |
-| ------------- | ------------- | ------------ |
-| domain        | string        | Domain name. |
 
 ```python
 import ip2whois
@@ -71,8 +51,7 @@ ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 
 # Convert punycode to normal text
-parameter = {'domain': 'täst.de'}
-result = ip2whois_init.getNormalText(parameter)
+result = ip2whois_init.getNormalText('täst.de')
 print(result)
 ```
 

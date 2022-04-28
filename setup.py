@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="IP2WHOIS",
-    version="2.0.0",
+    version="2.1.0",
     author="IP2WHOIS",
     author_email="support@ip2whois.com",
     description="IP2WHOIS Python SDK to help user to check WHOIS information for a particular domain.",

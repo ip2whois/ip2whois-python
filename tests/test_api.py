@@ -36,10 +36,10 @@ def test_function_exist(global_data):
 
 def test_get_puny_code(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
-    result = ip2whois_init.getPunycode('xn--tst-qla.de')
-    assert result == "täst.de"
+    result = ip2whois_init.getPunycode('täst.de')
+    assert result == "xn--tst-qla.de"
 
 def test_get_normal_text(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
-    result = ip2whois_init.getNormalText('täst.de')
-    assert result == "xn--tst-qla.de"
+    result = ip2whois_init.getNormalText('xn--tst-qla.de')
+    assert result == "täst.de"

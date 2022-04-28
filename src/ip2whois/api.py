@@ -48,16 +48,16 @@ class Api:
              return None
     
     def getPunycode(self, domain = ''):
+        domain = domain if domain else ''
+        if sys.version < '3':
+            converted_result = domain.encode('idna').decode('ascii')
+            return converted_result.encode('utf-8')
+        else:
+            return domain.encode('idna').decode('ascii')
+    
+    def getNormalText(self, domain = ''):
          if sys.version < '3':
             converted_result = unicode(domain if domain else '').encode('ascii').decode('idna')
             return converted_result.encode('utf-8')
          else:
             return domain.encode('ascii').decode('idna')
-    
-    def getNormalText(self, domain = ''):
-        domain = domain if domain else ''
-         if sys.version < '3':
-            converted_result = domain.encode('idna').decode('ascii')
-            return converted_result.encode('utf-8')
-         else:
-            return domain.encode('idna').decode('ascii')

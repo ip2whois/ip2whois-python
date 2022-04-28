@@ -37,7 +37,7 @@ ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 
 # Convert normal text to punycode
-result = ip2whois_init.getPunycode('xn--tst-qla.de')
+result = ip2whois_init.getPunycode('täst.de')
 print(result)
 ```
 
@@ -51,7 +51,7 @@ ip2whois_init = ip2whois.Api('YOUR_API_KEY')
 
 
 # Convert punycode to normal text
-result = ip2whois_init.getNormalText('täst.de')
+result = ip2whois_init.getNormalText('xn--tst-qla.de')
 print(result)
 ```
 

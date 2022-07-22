@@ -49,8 +49,7 @@ print(result)
 ```
 
 
-Response Parameter
-============
+# Response Parameter
 ### Lookup function
 | Parameter | Type | Description |
 |---|---|---|
@@ -107,7 +106,7 @@ Response Parameter
 |billing.email|string|Billing email address.|
 |name_servers|array|Name servers|
 
-```
+```json
 {
     "domain": "greendot.com",
     "domain_id": "600750_DOMAIN_COM-VRSN",

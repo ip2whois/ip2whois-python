@@ -83,12 +83,11 @@ class Api:
             return 'DOMAIN NOT FOUND'
         
         url_parse = urlparse(url)
+        
+        url_host = url_parse.hostname
+        
         if url_parse:
-            if 'www.' in url_parse.hostname:
-                domain_name = url_parse.hostname[4:len(url_parse.hostname)]
-            else:
-                domain_name = url_parse.hostname
-            return domain_name
+            return url_host[4:len(url_host)] if 'www.' in url_host else url_host
         
         return 'DOMAIN NOT FOUND'
     

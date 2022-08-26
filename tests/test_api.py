@@ -43,3 +43,13 @@ def test_get_normal_text(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
     result = ip2whois_init.getNormalText('xn--tst-qla.de')
     assert result == "täst.de"
+
+def test_get_domain_name(global_data):
+    ip2whois_init = ip2whois.Api(global_data["apikey"])
+    result = ip2whois_init.getDomainName('https://www.example.com/exe')
+    assert result == "example.com"
+
+def test_get_domain_extension(global_data):
+    ip2whois_init = ip2whois.Api(global_data["apikey"])
+    result = ip2whois_init.getDomainExtension('https://www.example.com/exe')
+    assert result == ".com"

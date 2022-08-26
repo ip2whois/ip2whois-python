@@ -48,6 +48,20 @@ result = ip2whois_init.getNormalText('xn--tst-qla.de')
 print(result)
 ```
 
+### Get Domain Extension
+
+```python
+import ip2whois
+
+# Configures IP2WHOIS API key
+ip2whois_init = ip2whois.Api('YOUR_API_KEY')
+
+
+# Get domain extension (gTLD or ccTLD) from URL or domain name
+result = ip2whois_init.getDomainExtension('example.com')
+print(result)
+```
+
 
 # Response Parameter
 ### Lookup function

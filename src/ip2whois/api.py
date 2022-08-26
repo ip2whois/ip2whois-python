@@ -40,7 +40,7 @@ class Api:
         self.apikey = apikey
         self.usessl = usessl
     
-    def lookup(self, domain = '', source = '', source_version):
+    def lookup(self, source_version, domain = '', source = ''):
 
          try:
              parameters = urlencode((("key", self.apikey), ("format", 'json'), ("domain", domain if domain else ''), ("source", source if source else 'Python'), ('source_version', source_version)))

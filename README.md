@@ -12,6 +12,7 @@ pip install IP2WHOIS
 
 
 # Usage Example
+
 ### Lookup Domain Information
 ```python
 import ip2whois
@@ -64,6 +65,7 @@ print(result)
 
 
 # Response Parameter
+
 ### Lookup function
 | Parameter | Type | Description |
 |---|---|---|

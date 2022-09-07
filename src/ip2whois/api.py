@@ -40,10 +40,10 @@ class Api:
         self.apikey = apikey
         self.usessl = usessl
     
-    def lookup(self, source_version, domain = '', source = ''):
+    def lookup(self, domain = '', source_version = '2.2.4', source = ''):
 
          try:
-             parameters = urlencode((("key", self.apikey), ("format", 'json'), ("domain", domain if domain else ''), ("source", source if source else 'Python'), ('source_version', source_version)))
+             parameters = urlencode((("key", self.apikey), ("format", 'json'), ("domain", domain if domain else ''), ("source", source if source else 'sdk-python'), ('source_version', source_version)))
              response = httprequest(parameters, self.usessl)
              return response
          except:

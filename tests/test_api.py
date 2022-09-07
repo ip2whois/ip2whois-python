@@ -26,7 +26,7 @@ def test_lookup(global_data):
 def test_function_exist(global_data):
     ip2whois_init = ip2whois.Api(global_data["apikey"])
     errors = []
-    functions_list = ['lookup', 'getPunycode', 'getNormalText']
+    functions_list = ['lookup', 'getPunycode', 'getNormalText', 'getDomainName', 'getDomainExtension']
     for x in range(len(functions_list)): 
         # assert hasattr(mbv, functions_list[x]) == True, "Function did not exist."
         if (hasattr(ip2whois_init, functions_list[x]) is False):

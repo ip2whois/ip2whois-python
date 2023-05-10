@@ -120,72 +120,75 @@ print(result)
 |billing.phone|string|Billing phone number.|
 |billing.fax|string|Billing fax number.|
 |billing.email|string|Billing email address.|
-|name_servers|array|Name servers|
+|nameservers|array|Name servers|
 
 ```json
 {
-    "domain": "greendot.com",
-    "domain_id": "600750_DOMAIN_COM-VRSN",
-    "status": "registered",
-    "create_date": "1997-11-03T00:00:00Z",
-    "update_date": "2019-10-29T01:25:57Z",
-    "expire_date": "2021-11-02T05:00:00Z",
-    "domain_age": 9027,
-    "whois_server": "whois.corporatedomains.com",
-    "registrar": {
-        "iana_id": "299",
-        "name": "CSC CORPORATE DOMAINS, INC.",
-        "url": "www.cscprotectsbrands.com"
-    },
-    "registrant": {
-        "name": "Admin Role",
-        "organization": "Green Dot Corporation",
-        "street_address": "",
-        "city": "Pasadena",
-        "region": "CA",
-        "zip_code": "91107",
-        "country": "US",
-        "phone": "+1.8664120548",
-        "fax": "+1.8664120548",
-        "email": "adminrole@greendotcorp.com"
-    },
-    "admin": {
-        "name": "Admin Role",
-        "organization": "Green Dot Corporation",
-        "street_address": "",
-        "city": "Pasadena",
-        "region": "CA",
-        "zip_code": "91107",
-        "country": "US",
-        "phone": "+1.8664120548",
-        "fax": "+1.8664120548",
-        "email": "adminrole@greendotcorp.com"
-    },
-    "tech": {
-        "name": "Admin Role",
-        "organization": "Green Dot Corporation",
-        "street_address": "",
-        "city": "Pasadena",
-        "region": "CA",
-        "zip_code": "91107",
-        "country": "US",
-        "phone": "+1.8664120548",
-        "fax": "+1.8664120548",
-        "email": "adminrole@greendotcorp.com"
-    },
-    "billing": {
-        "name": "",
-        "organization": "",
-        "street_address": "",
-        "city": "",
-        "region": "",
-        "zip_code": "",
-        "country": "",
-        "phone": "",
-        "fax": "",
-        "email": ""
-    },
-    "nameservers": "ns1.greendotdns.com, ns2.greendotdns.com"
+  "domain": "greendot.com",
+  "domain_id": "600750_DOMAIN_COM-VRSN",
+  "status": "clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited",
+  "create_date": "1997-11-03T00:00:00Z",
+  "update_date": "2021-10-29T01:13:27Z",
+  "expire_date": "2023-11-02T05:00:00Z",
+  "domain_age": 9319,
+  "whois_server": "whois.corporatedomains.com",
+  "registrar": {
+    "iana_id": "299",
+    "name": "CSC CORPORATE DOMAINS, INC.",
+    "url": "www.cscprotectsbrands.com"
+  },
+  "registrant": {
+    "name": "Admin Role",
+    "organization": "Green Dot Corporation",
+    "street_address": "3465 E. Foothill Blvd",
+    "city": "Pasadena",
+    "region": "CA",
+    "zip_code": "91107",
+    "country": "US",
+    "phone": "+1.8664120548",
+    "fax": "+1.8664120548",
+    "email": "adminrole@greendotcorp.com"
+  },
+  "admin": {
+    "name": "Admin Role",
+    "organization": "Green Dot Corporation",
+    "street_address": "3465 E. Foothill Blvd",
+    "city": "Pasadena",
+    "region": "CA",
+    "zip_code": "91107",
+    "country": "US",
+    "phone": "+1.8664120548",
+    "fax": "+1.8664120548",
+    "email": "adminrole@greendotcorp.com"
+  },
+  "tech": {
+    "name": "Admin Role",
+    "organization": "Green Dot Corporation",
+    "street_address": "3465 E. Foothill Blvd",
+    "city": "Pasadena",
+    "region": "CA",
+    "zip_code": "91107",
+    "country": "US",
+    "phone": "+1.8664120548",
+    "fax": "+1.8664120548",
+    "email": "adminrole@greendotcorp.com"
+  },
+  "billing": {
+    "name": "",
+    "organization": "",
+    "street_address": "",
+    "city": "",
+    "region": "",
+    "zip_code": "",
+    "country": "",
+    "phone": "",
+    "fax": "",
+    "email": ""
+  },
+  "nameservers": [
+    "dexter.ns.cloudflare.com",
+    "aliza.ns.cloudflare.com"
+  ]
 }
 ```
 
